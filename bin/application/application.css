@@ -1,0 +1,80 @@
+/* Java CSS Author: Mitchell */
+
+
+.tab-pane {
+    -fx-tab-min-width:100px;
+    -fx-background-color: #191919;
+    -fx-effect: innershadow(three-pass-box , rgba(41,41,41,0.9) , 4, 0.0 , 0 , 0);
+}
+
+.tab {
+    -fx-background-insets: 0 1 0 1,0,0;
+    -fx-text-base-color: White;
+}
+.tab-pane .tab {
+    -fx-background-color: #191919;
+
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color:  #191919;
+}
+
+#TabPaneInv {
+	-fx-background-color: -fx-outer-border, -fx-inner-border, derive(-fx-color, -20%);
+    -fx-effect: innershadow(three-pass-box , rgba(41,41,41,0.9) , 4, 0.0 , 0 , 0);
+	
+}
+.BorderPane {
+	-fx-background-color: #191919;
+}
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #FCFA20;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+}
+
+#PO_submitButton, #Sales_submitButton, #viewButton { /*Initial styles for all the submit buttons */
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#000000 0%, #1f2429 20%, #000000 100%),
+        linear-gradient(#7E7F81, #000000),
+        radial-gradient(center 50% 0%, radius 100%, rgba(41,41,41,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: #FCFA20;
+    -fx-font-size: 12px;
+    -fx-padding: 5 5 5 5;
+    -fx-font-weight: bold;
+}	
+
+/*When button is hovered over */
+#viewButton:hover, #PO_submitButton:hover, #Sales_submitButton:hover{
+  -fx-background-color: 
+        #152029,
+        linear-gradient(#8E97A1 10%, #8E97A1 20%, #8E97A1 100%),
+        linear-gradient(#A0B1C3, #0C1822),
+        radial-gradient(center 50% 0%, radius 60%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+}
+
+/*When button is pressed */
+#viewButton:pressed, #PO_submitButton:pressed, #Sales_submitButton:pressed{
+  -fx-background-color: 
+        #152029,
+        linear-gradient(#152029 10%, #8E97A1 20%, #8E97A1 100%),
+        linear-gradient(#152029, #0C1822),
+        radial-gradient(center 50% 0%, radius 60%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+   -fx-font-size: 11.8px;    
+}
+
+
+#PO_ID_Tble, #PO_Date_Tble, #LiquorID, #LiquorBrand, #LiquorName, #LiquorType, #Liquor_Qty_InStock { /*Aligns the data in columns in table */
+	-fx-alignment: CENTER;
+}

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="850.0" stylesheets="../application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TotalLiquorController">
+   <top>
+      <Pane prefHeight="126.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <children>
+            <ImageView fitHeight="195.0" fitWidth="415.0" layoutX="472.0" layoutY="-45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/Whisky-Banner.jpg" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="171.0" layoutX="-31.0" layoutY="-36.0" stroke="BLACK" strokeType="INSIDE" width="534.0" />
+            <Label layoutX="14.0" layoutY="-3.0" prefHeight="115.0" prefWidth="391.0" text="Total Liquor " textFill="#e5e331">
+               <font>
+                  <Font name="Harlow Solid Italic" size="68.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <TabPane fx:id="TabPaneInv" prefHeight="472.0" prefWidth="850.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Inventory">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="526.0" prefWidth="805.0">
+                     <children>
+                        <ImageView fitHeight="557.0" fitWidth="856.0" layoutX="-2.0" layoutY="-5.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../resources/carbon-fiber.jpg" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="tableID" layoutX="27.0" layoutY="84.0" prefHeight="425.0" prefWidth="803.0">
+                           <columns>
+                              <TableColumn id="LiquorID" fx:id="LiquorID" prefWidth="75.0" text="Liquor ID" />
+                              <TableColumn fx:id="LiquorBrand" prefWidth="75.0" text="Liquor Brand" />
+                              <TableColumn fx:id="LiquorName" prefWidth="75.0" text="Liquor Name" />
+                              <TableColumn fx:id="LiquorType" prefWidth="75.0" text="Liquor Type" />
+                              <TableColumn fx:id="Liquor_Qty_InStock" prefWidth="75.0" text="Quantity in Stock" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+      
+                        <Label layoutX="303.0" layoutY="-18.0" prefHeight="56.0" prefWidth="251.0" text="Inventory" textFill="#e5e331">
+                           <font>
+                              <Font name="Harlow Solid Italic" size="55.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Purchase Orders">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="548.0" fitWidth="865.0" layoutX="-8.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../resources/carbon-fiber.jpg" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="tableID2" layoutX="580.0" layoutY="70.0" prefHeight="274.0" prefWidth="256.0">
+                           <columns>
+                              <TableColumn fx:id="PO_ID_Tble" prefWidth="171.0" text="PO Number" />
+                              <TableColumn fx:id="PO_Date_Tble" prefWidth="83.0" text="Date" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <TextField id="POID" fx:id="POID" layoutX="151.0" layoutY="81.0" prefHeight="25.0" prefWidth="152.0" promptText="XXXXXXXXXXXXXXX" />
+                        <Label layoutX="16.0" layoutY="82.0" text="PO Number:" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="POLiquorID" fx:id="POLiquorID" layoutX="326.0" layoutY="128.0" prefHeight="25.0" prefWidth="231.0" promptText="D31456CXP143" />
+                        <Label layoutX="16.0" layoutY="129.0" text="Liquor Identification Number:" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="PODate" fx:id="PODate" layoutX="176.0" layoutY="176.0" prefHeight="25.0" prefWidth="103.0" promptText="06/01/2018" />
+                        <Label layoutX="16.0" layoutY="176.0" text="Purchase Date:" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="POQty" fx:id="POQty" layoutX="230.0" layoutY="222.0" prefHeight="25.0" prefWidth="147.0" promptText="25" />
+                        <Label layoutX="16.0" layoutY="223.0" text="Quantity Purchased:" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="PO_TotalAmount" fx:id="PO_TotalAmount" layoutX="169.0" layoutY="269.0" prefHeight="25.0" prefWidth="142.0" promptText="123.56" />
+                        <Label layoutX="16.0" layoutY="270.0" text="Total Amount:" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="PO_submitButton" layoutX="270.0" layoutY="317.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Submit" />
+                        <Button fx:id="viewButton" layoutX="658.0" layoutY="353.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="View" />
+                        <Label layoutX="76.0" layoutY="17.0" prefHeight="61.0" prefWidth="388.0" text="Submit Purchase Order" textFill="#e5e331">
+                           <font>
+                              <Font name="Harlow Solid Italic" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="606.0" layoutY="35.0" text="View Purchase Order" textFill="#e5e331">
+                           <font>
+                              <Font name="Century Gothic Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+     		 <Tab text="Customer Order">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="547.0" fitWidth="850.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../resources/carbon-fiber.jpg" />
+                           </image>
+                        </ImageView>
+                        <Rectangle arcWidth="5.0" fill="#dddddd52" height="296.0" layoutX="223.0" layoutY="81.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.5" width="403.0" />
+                        <TextField id="source9" fx:id="Sales_LiquorID" layoutX="350.0" layoutY="143.0" prefHeight="25.0" prefWidth="169.0" promptText="D31456CXP143" />
+                        <Label layoutX="249.0" layoutY="144.0" text="LiqourID:" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="source10" fx:id="SalesID" layoutX="405.0" layoutY="96.0" prefHeight="25.0" prefWidth="119.0" promptText="J0001" />
+                        <Label layoutX="249.0" layoutY="97.0" text="Sales Number:" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="source11" fx:id="Sales_Date" layoutX="369.0" layoutY="190.0" prefHeight="25.0" prefWidth="90.0" promptText="01/11/2018" />
+                        <Label layoutX="249.0" layoutY="191.0" text="Sales Date:" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="source12" fx:id="CustomerName" layoutX="429.0" layoutY="237.0" prefHeight="25.0" prefWidth="152.0" promptText="John Doe" />
+                        <Label layoutX="249.0" layoutY="238.0" text="Customer Name:" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="Sales_submitButton" layoutX="379.0" layoutY="392.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Submit" />
+                        <TextField id="source12" fx:id="Sales_Qty" layoutX="356.0" layoutY="281.0" prefHeight="25.0" prefWidth="42.0" promptText="2" />
+                        <Label layoutX="249.0" layoutY="282.0" text="Quantity: " textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="source12" fx:id="Sales_TotalAmount" layoutX="404.0" layoutY="328.0" prefHeight="25.0" prefWidth="119.0" promptText="56.34" />
+                        <Label layoutX="249.0" layoutY="329.0" text="Total Amount:" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="231.0" layoutY="12.0" prefHeight="4.0" prefWidth="399.0" styleClass="Headers" text="Submit Customer Order" textFill="#e5e331">
+                           <font>
+                              <Font name="Harlow Solid Italic" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+         <stylesheets>
+            <URL value="@application.css" />
+         </stylesheets>
+      </TabPane>
+   </left>
+</BorderPane>
