@@ -102,7 +102,7 @@
                               <Font name="Lucida Sans Demibold" size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="PODate" fx:id="PODate" layoutX="176.0" layoutY="176.0" prefHeight="25.0" prefWidth="103.0" promptText="06/01/2018" />
+                        <TextField id="PODate" fx:id="PODate" layoutX="176.0" layoutY="176.0" prefHeight="25.0" prefWidth="103.0" promptText="YYYY-MM-DD" />
                         <Label layoutX="16.0" layoutY="176.0" text="Purchase Date:" textFill="WHITE" underline="true">
                            <font>
                               <Font name="Lucida Sans Demibold" size="20.0" />
@@ -158,7 +158,7 @@
                               <Font name="Lucida Sans Demibold" size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="source11" fx:id="Sales_Date" layoutX="369.0" layoutY="190.0" prefHeight="25.0" prefWidth="90.0" promptText="01/11/2018" />
+                        <TextField id="source11" fx:id="Sales_Date" layoutX="369.0" layoutY="190.0" prefHeight="25.0" prefWidth="90.0" promptText="YYYY-MM-DD" />
                         <Label layoutX="249.0" layoutY="191.0" text="Sales Date:" textFill="WHITE" underline="true">
                            <font>
                               <Font name="Lucida Sans Demibold" size="20.0" />
